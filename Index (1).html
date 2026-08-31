@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parchi d'Italia | Home</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style (1).CSS">
+
+    <!-- Aggiunto il CDN di Font Awesome per far apparire le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Reset e Stili Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #F7FDFF;
+            color: #1e2a2e;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: #222E30;
+            padding: 1.5rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            color: #F7FDFF;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        .logo p { color: #a8c4cb; font-size: 0.75rem; margin-top: 4px; }
+        .header-icons { display: flex; gap: 1.8rem; color: #F7FDFF; font-size: 1.3rem; }
+
+        /* Hero Section */
+        .hero {
+            background-color: #F7FDFF;
+            padding: 3rem 2rem 1rem 2rem;
+            text-align: center;
+        }
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #1c3f44;
+            max-width: 800px;
+            margin: 0 auto 1rem auto;
+        }
+
+        /* Cards Container */
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 3rem 2rem 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card-icona {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            border-radius: 2rem;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .card-icona:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Stili modificati per le icone piccole */
+        .card-icona i {
+            font-size: 2rem;       /* Icona più piccola */
+            color: #222E30;
+            background: #eef3f5;
+            width: 65px;           /* Cerchio più piccolo */
+            height: 65px;
+            line-height: 65px;     /* Centra l'icona verticalmente */
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        
+        /* Forza il colore scuro del link anche se visitato */
+        .card-icona a, 
+        .card-icona a:visited {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #222E30;
+        }
+        .card-icona a:hover {
+            color: #1c3f44; /* Leggero cambio colore al passaggio del mouse */
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #26363A;
+            padding: 2rem;
+            margin-top: auto;
+            text-align: center;
+        }
+        .footer-nav { margin-bottom: 1rem; }
+        .footer-nav a { color: #F7FDFF; text-decoration: none; margin: 0 1rem; font-size: 0.9rem; }
+        .copyright { color: #b0ccd3; font-size: 0.8rem; border-top: 1px solid rgba(247,253,255,0.1); padding-top: 1rem; }
+
+        @media (max-width: 768px) {
+            .cards-container { flex-direction: column; align-items: center; }
+            .card-icona { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo">
+            <h1>Parchi d'Italia</h1>
+            <p>Biodiversità, paesaggi, natura, cultura</p>
+        </div>
+        <div class="header-icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h2>Biodiversità, paesaggi, tradizioni, natura, cultura.</h2>
+            <p>Scopri i parchi più suggestivi d'Italia tra montagne, fauna e percorsi unici</p>
+        </div>
+
+        <div class="cards-container">
+            <div class="card-icona">
+                <i class="fas fa-mountain"></i>
+                <a href="parchi (1).html">Parchi</a>
+            </div>
+            
+            <div class="card-icona">
+                <i class="fas fa-paw"></i>
+                <a href="Flora e Fauna.html">Flora e Fauna</a>
+            </div>
+            
+            <div class="card-icona">
+                <i class="fas fa-hiking"></i>
+                <a href="Attivita (1).html">Attività</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="#">Contatti</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="copyright">© 2026 Parchiditalia - Design</div>
+    </footer>
+
+</body>
+</html>

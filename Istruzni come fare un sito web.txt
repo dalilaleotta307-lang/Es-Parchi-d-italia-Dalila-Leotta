@@ -1,0 +1,18 @@
+Istruzni come fare un sito web
+
+
+
+
+
+Il <head> (Il Tetto e i Documenti)
+Nel head metti tutto quello che non si vede direttamente sulla pagina, ma che serve al browser per far funzionare il sito. È come la "carta d'identità" della pagina.
+
+Meta tag: Informazioni per Google e per far vedere bene il sito sui cellulari (viewport).
+
+Titolo: Quello che appare sulla linguetta del browser (title).
+
+Stili (CSS): Tutte le istruzioni sui colori, font e dimensioni (dentro il tag <style>).
+
+Font e Icone: I collegamenti a Google Fonts o FontAwesome.
+
+Regola d'oro: Se scrivi del testo o metti dei link qui dentro, l'utente non li vedrà bene o, come è successo a te, si creeranno dei duplicati strani in cima alla pagina.

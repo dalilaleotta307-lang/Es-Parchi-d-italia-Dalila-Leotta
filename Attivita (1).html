@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parchi d'Italia | Attività</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #F7FDFF;
+            color: #1e2a2e;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header identico alla Home */
+        .site-header {
+            background-color: #222E30;
+            padding: 1.5rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            color: #F7FDFF;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo p {
+            color: #a8c4cb;
+            font-size: 0.75rem;
+            margin-top: 4px;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 1.8rem;
+            align-items: center;
+        }
+
+        .header-icons i {
+            color: #F7FDFF;
+            font-size: 1.3rem;
+            cursor: default;
+        }
+
+        /* Titolo pagina */
+        .page-title {
+            background-color: #F7FDFF;
+            padding: 2rem 2.5rem 1rem 2.5rem;
+        }
+
+        .page-title h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1c3f44;
+            border-left: 5px solid #222E30;
+            padding-left: 1.2rem;
+        }
+
+        /* GRIGLIA CSS GRID 2x2 su desktop, 1 colonna su mobile */
+        .grid-attivita {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1300px;
+            margin: 2rem auto;
+            padding: 0 2rem 3rem 2rem;
+        }
+
+        /* Card con stessa altezza, ombra, bordi arrotondati */
+        .card {
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.1);
+            padding: 2rem 1.8rem;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border: 1px solid #eef2f4;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-icon {
+            font-size: 2.6rem;
+            color: #222E30;
+            background: #eef3f5;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 35px;
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1f3e42;
+            margin-bottom: 0.8rem;
+        }
+
+        .card p {
+            color: #2f555a;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        /* Footer identico alla Home */
+        .site-footer {
+            background-color: #26363A;
+            padding: 2rem 2rem 1.5rem;
+            margin-top: auto;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-nav a {
+            color: #F7FDFF;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .footer-nav a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #b0ccd3;
+            font-size: 0.8rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(247, 253, 255, 0.15);
+        }
+
+        /* Responsive: da 2 colonne a 1 colonna su tablet e mobile */
+        @media (max-width: 800px) {
+            .grid-attivita {
+                grid-template-columns: 1fr;
+                max-width: 550px;
+                gap: 1.8rem;
+            }
+            .site-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .page-title h1 {
+                font-size: 2rem;
+            }
+            .card h3 {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-attivita {
+                padding: 0 1.2rem 2rem 1.2rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER (coerente con la Home) -->
+    <header class="site-header">
+        <div class="logo">
+            <h1>Parchi d'Italia</h1>
+            <p>Biodiversità, paesaggi, natura, cultura</p>
+        </div>
+        <div class="header-icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- TITOLO PAGINA ATTIVITÀ -->
+    <div class="page-title">
+        <h1>Attività</h1>
+    </div>
+
+    <!-- GRIGLIA 4 CARD (CSS GRID) -->
+    <div class="grid-attivita">
+        
+        <!-- Card 1: Trekking -->
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-person-hiking"></i>
+            </div>
+            <h3>Trekking</h3>
+            <p>Trekkings sull'Alta Via delle Dolomiti, un'esperienza unica tra cime maestose, rifugi alpini e panorami mozzafiato. Percorsi adatti ad escursionisti esperti e amanti dell'alta montagna.</p>
+        </div>
+
+        <!-- Card 2: Birdwatching al Gran Paradiso -->
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-binoculars"></i>
+            </div>
+            <h3>Birdwatching al Gran Paradiso</h3>
+            <p>Il Parco Nazionale del Gran Paradiso è un paradiso per gli amanti del birdwatching. Qui è possibile osservare aquile reali, gipeti, gracchi alpini e molte altre specie rare in un ambiente incontaminato.</p>
+        </div>
+
+        <!-- Card 3: Escursioni sui crateri dell'Etna -->
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-map-marked-alt"></i>
+            </div>
+            <h3>Escursioni sui crateri dell'Etna</h3>
+            <p>Esplorare l'Etna significa camminare su un vulcano vivo, tra crateri fumanti, colate laviche e paesaggi lunari. Guide vulcanologiche accompagnano alla scoperta di questa straordinaria forza della natura.</p>
+        </div>
+
+        <!-- Card 4: Percorsi naturalistici nel Pollino -->
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-shoe-prints"></i>
+            </div>
+            <h3>Percorsi naturalistici nel Pollino</h3>
+            <p>Nel Parco Nazionale del Pollino, i percorsi naturalistici attraversano gole profonde, boschi di pino loricato e offrono scorci suggestivi. Ideali per famiglie e naturalisti alla scoperta della biodiversità.</p>
+        </div>
+    </div>
+
+    <!-- FOOTER (identico alla Home) -->
+    <footer class="site-footer">
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="#">Contatti</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="copyright">
+            © 2026 Parchiditalia - Design
+        </div>
+    </footer>
+
+</body>
+</html>
