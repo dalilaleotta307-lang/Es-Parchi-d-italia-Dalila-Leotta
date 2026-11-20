@@ -1,10 +1,5 @@
 /* ============================================
-   PARCHI D'ITALIA 2.0 - STILE COMPLETO
-   Palette: #222E30 (verde scuro primario)
-            #26363A (verde medio)
-            #F7FDFF (bianco ghiaccio)
-   Font: Playfair Display (serif) / Montserrat (sans)
-   Include: HOME | ATTIVITÀ | PARCHI | ETNA | GRAN PARADISO | DOLOMITI | POLLINO | FLORA E FAUNA
+   PARCHI D'ITALIA - STILE COMPLETO RESPONSIVE
    ============================================ */
 
 /* ========== RESET E BASE ========== */
@@ -18,21 +13,35 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #F7FDFF;
     color: #1e2a2e;
-    line-height: 1.5;
+    line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* ========== TYPOGRAPHY ========== */
 h1, h2, h3, .serif-title {
     font-family: 'Playfair Display', serif;
 }
 
-/* ========== HEADER GENERICO (sfondo scuro per Home e Attività) ========== */
-.site-header-dark {
-    background-color: #222E30;
-    padding: 1.5rem 2.5rem;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ========== HEADER GENERICO ========== */
+.site-header-dark,
+.site-header-light,
+.site-header-flora,
+.site-header-etna,
+.site-header-granparadiso,
+.site-header-dolomiti,
+.site-header-pollino {
+    padding: 1.2rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,68 +49,22 @@ h1, h2, h3, .serif-title {
     gap: 1rem;
 }
 
-.site-header-dark .logo h1 {
-    font-family: 'Playfair Display', serif;
-    color: #F7FDFF;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
-.site-header-dark .logo p {
-    color: #a8c4cb;
-    font-size: 0.75rem;
-    margin-top: 4px;
-}
-
-/* ========== HEADER PER PAGINA PARCHI (sfondo chiaro) ========== */
-.site-header-light {
-    background-color: #F7FDFF;
-    padding: 1.5rem 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    border-bottom: 1px solid #e0e9ec;
-}
-
-.site-header-light .logo h1 {
-    font-family: 'Playfair Display', serif;
-    color: #222E30;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
-.site-header-light .logo p {
-    color: #4a6f76;
-    font-size: 0.75rem;
-    margin-top: 4px;
-}
-
-.site-header-light .header-icons i {
-    color: #222E30;
-}
-
-/* ========== HEADER PER PAGINA FLORA E FAUNA (sfondo chiaro) ========== */
-
-
-/* ========== HEADER PER PAGINE DETTAGLIO (sfondo scuro) ========== */
+.site-header-dark,
 .site-header-etna,
 .site-header-granparadiso,
 .site-header-dolomiti,
 .site-header-pollino {
     background-color: #222E30;
-    padding: 1.5rem 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
     border-bottom: 1px solid rgba(247, 253, 255, 0.1);
 }
 
+.site-header-light,
+.site-header-flora {
+    background-color: #F7FDFF;
+    border-bottom: 1px solid #e0e9ec;
+}
+
+.site-header-dark .logo h1,
 .site-header-etna .logo h1,
 .site-header-granparadiso .logo h1,
 .site-header-dolomiti .logo h1,
@@ -113,16 +76,33 @@ h1, h2, h3, .serif-title {
     letter-spacing: -0.5px;
 }
 
+.site-header-light .logo h1,
+.site-header-flora .logo h1 {
+    font-family: 'Playfair Display', serif;
+    color: #222E30;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.logo p {
+    font-size: 0.75rem;
+    margin-top: 4px;
+}
+
+.site-header-dark .logo p,
 .site-header-etna .logo p,
 .site-header-granparadiso .logo p,
 .site-header-dolomiti .logo p,
 .site-header-pollino .logo p {
     color: #a8c4cb;
-    font-size: 0.75rem;
-    margin-top: 4px;
 }
 
-/* ========== ICONE HEADER (comuni a tutti) ========== */
+.site-header-light .logo p,
+.site-header-flora .logo p {
+    color: #4a6f76;
+}
+
 .header-icons {
     display: flex;
     gap: 1.8rem;
@@ -152,7 +132,7 @@ h1, h2, h3, .serif-title {
     opacity: 0.7;
 }
 
-/* ========== FOOTER (condiviso da tutte le pagine) ========== */
+/* ========== FOOTER ========== */
 .site-footer {
     background-color: #26363A;
     padding: 2rem 2rem 1.5rem;
@@ -188,7 +168,7 @@ h1, h2, h3, .serif-title {
     border-top: 1px solid rgba(247, 253, 255, 0.15);
 }
 
-/* ========== HOME PAGE SPECIFIC (Flexbox) ========== */
+/* ========== HOME PAGE ========== */
 .hero {
     background-color: #F7FDFF;
     padding: 3rem 2rem 1rem 2rem;
@@ -212,7 +192,6 @@ h1, h2, h3, .serif-title {
     margin: 0 auto;
 }
 
-/* 3 colonne - FLEXBOX */
 .cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -227,6 +206,7 @@ h1, h2, h3, .serif-title {
 .card-icona {
     flex: 1;
     min-width: 220px;
+    max-width: 320px;
     background: white;
     border-radius: 2rem;
     padding: 2rem 1.5rem;
@@ -268,7 +248,7 @@ h1, h2, h3, .serif-title {
     text-decoration: underline;
 }
 
-/* ========== ATTIVITÀ PAGE SPECIFIC (CSS Grid) ========== */
+/* ========== ATTIVITÀ PAGE ========== */
 .page-title {
     background-color: #F7FDFF;
     padding: 2rem 2.5rem 1rem 2.5rem;
@@ -283,7 +263,6 @@ h1, h2, h3, .serif-title {
     padding-left: 1.2rem;
 }
 
-/* GRIGLIA CSS GRID */
 .grid-attivita {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -293,7 +272,6 @@ h1, h2, h3, .serif-title {
     padding: 0 2rem 3rem 2rem;
 }
 
-/* Card con stessa altezza, ombra, bordi arrotondati */
 .card {
     background: white;
     border-radius: 28px;
@@ -339,7 +317,7 @@ h1, h2, h3, .serif-title {
     flex-grow: 1;
 }
 
-/* ========== PARCHI PAGE SPECIFIC (Card verticali con immagini) ========== */
+/* ========== PARCHI PAGE ========== */
 .parchi-subtitle {
     max-width: 900px;
     margin: 0 auto;
@@ -350,7 +328,6 @@ h1, h2, h3, .serif-title {
     line-height: 1.6;
 }
 
-/* Container per le card dei parchi - layout verticale */
 .parchi-cards-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -360,7 +337,6 @@ h1, h2, h3, .serif-title {
     gap: 2rem;
 }
 
-/* Card singola con immagine di sfondo */
 .parchi-card {
     position: relative;
     border-radius: 28px;
@@ -371,7 +347,6 @@ h1, h2, h3, .serif-title {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
 
 .parchi-card:hover {
@@ -379,7 +354,6 @@ h1, h2, h3, .serif-title {
     box-shadow: 0 28px 40px -15px rgba(0, 0, 0, 0.25);
 }
 
-/* Overlay scuro per leggibilità testo */
 .parchi-card::before {
     content: '';
     position: absolute;
@@ -396,10 +370,22 @@ h1, h2, h3, .serif-title {
     background: rgba(0, 0, 0, 0.6);
 }
 
-/* Testo centrato sulla card */
-.parchi-card h2 {
-    position: relative;
+.card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     z-index: 2;
+}
+
+.card-link h2 {
+    position: relative;
+    z-index: 3;
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
     font-weight: 700;
@@ -408,17 +394,14 @@ h1, h2, h3, .serif-title {
     letter-spacing: 1px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     padding: 1.5rem;
+    transition: all 0.3s ease;
 }
 
-/* Link per rendere cliccabile la card */
-.parchi-card a {
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    height: 100%;
+.card-link:hover h2 {
+    transform: scale(1.08);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Immagini di sfondo per ogni card */
 .card-gran-paradiso {
     background-image: url(https://www.visittrentino.info/_default_upload_bucket/7134758/image-thumb__7134758__contentgallery-wide/45875_che%20cosa%20sono%20le%20dolomiti.b2c5b81c.jpg);
     background-size: cover;
@@ -443,76 +426,7 @@ h1, h2, h3, .serif-title {
     background-position: center;
 }
 
-/* ========== PAGINA FLORA E FAUNA - STILI SPECIFICI ========== */
-
-/* ==========/* ===== RESET & BASE ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body.flora-fauna-page {
-    background-color: #F7FDFF;
-    font-family: 'Montserrat', sans-serif;
-    color: #222E30;
-    line-height: 1.6;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* ===== HEADER ===== */
-.site-header-flora {
-    background-color: #F7FDFF;
-    padding: 1.5rem 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    border-bottom: 1px solid #e0e9ec;
-}
-
-.site-header-flora .logo h1 {
-    font-family: 'Playfair Display', serif;
-    color: #222E30;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
-.site-header-flora .logo p {
-    color: #4a6f76;
-    font-size: 0.75rem;
-    margin-top: 4px;
-}
-
-.site-header-flora .header-icons {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.site-header-flora .header-icons i {
-    color: #222E30;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.site-header-flora .header-icons i:hover {
-    color: #4a6f76;
-}
-
-/* ===== HERO ===== */
+/* ========== FLORA E FAUNA ========== */
 .flora-hero {
     text-align: center;
     padding: 3rem 2rem 2rem 2rem;
@@ -536,14 +450,12 @@ a {
     line-height: 1.6;
 }
 
-/* ===== CONTAINER ===== */
 .flora-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 2rem 3rem 2rem;
 }
 
-/* ===== SEZIONI ===== */
 .flora-section {
     margin-bottom: 4rem;
 }
@@ -604,773 +516,31 @@ a {
     margin-bottom: 0;
 }
 
-/* ===== FOOTER ===== */
-.site-footer {
-    background-color: #222E30;
-    color: #e8f0f2;
-    padding: 2rem 2.5rem;
-    text-align: center;
-    border-top: 1px solid #3a5a60;
-}
-
-.site-footer .footer-nav {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-}
-
-.site-footer .footer-nav a {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #b8d0d5;
-    transition: color 0.3s;
-}
-
-.site-footer .footer-nav a:hover {
-    color: #ffffff;
-}
-
-.site-footer .copyright {
-    font-size: 0.8rem;
-    color: #8aaab0;
-    letter-spacing: 0.5px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    .site-header-flora {
-        padding: 1rem 1.5rem;
-    }
-
-    .site-header-flora .logo h1 {
-        font-size: 1.4rem;
-    }
-
-    .flora-hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .flora-hero p {
-        font-size: 1rem;
-        padding: 0 1rem;
-    }
-
-    .flora-container {
-        padding: 1rem 1.5rem 2rem;
-    }
-
-    .flora-layout-row {
-        flex-direction: column !important;
-    }
-
-    .flora-layout-row.reverse {
-        flex-direction: column !important;
-    }
-
-    .flora-text h2 {
-        font-size: 1.6rem;
-        border-left-width: 3px;
-        padding-left: 0.8rem;
-    }
-
-    .flora-image {
-        min-width: 100%;
-    }
-
-    .flora-image img {
-        border-radius: 16px;
-    }
-
-    .site-footer {
-        padding: 1.5rem 1.5rem;
-    }
-
-    .site-footer .footer-nav {
-        gap: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .flora-hero h1 {
-        font-size: 2rem;
-    }
-
-    .flora-text h2 {
-        font-size: 1.3rem;
-    }
-
-    .flora-text p {
-        font-size: 0.95rem;
-    }
-
-    .site-header-flora .logo h1 {
-        font-size: 1.2rem;
-    }
-
-    .site-header-flora .header-icons i {
-        font-size: 1rem;
-    }
-
-    .flora-section {
-        margin-bottom: 2.5rem;
-    }
-
-    .flora-container {
-        padding: 0.5rem 1rem 1.5rem;
-    }
-} PAGINA ETNA - STILI SPECIFICI ========== */
-/* 1. Sfondo della pagina */
-
-body.etna-page {
-    background-color: #222e30;
-}
-
-/* 2. Citazione */
-.etna-quote {
-    background-color: #222E30;
-    padding: 2rem 2rem;
-    text-align: center;
-    border-bottom: 1px solid rgba(247, 253, 255, 0.1);
-}
-
-.etna-quote blockquote {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: #ffffff;
-    max-width: 900px;
-    margin: 0 auto;
-    line-height: 1.5;
-}
-
-.etna-quote blockquote::before {
-    content: "«";
-    font-size: 2rem;
-    margin-right: 0.3rem;
-    color: #9bb8d4;
-}
-
-.etna-quote blockquote::after {
-    content: "»";
-    font-size: 2rem;
-    margin-left: 0.3rem;
-    color: #9bb8d4;
-}
-
-/* 3. Contenitore principale */
-.etna-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 2rem 3rem 2rem;
-}
-
-/* 4. Hero Section */
-.etna-hero {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    margin-bottom: 4rem;
-    flex-wrap: wrap;
-}
-
-.etna-hero-image {
-    flex: 1;
-    min-width: 280px;
-}
-
-.etna-hero-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 24px;
-    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease;
-}
-
-.etna-hero-image img:hover {
-    transform: scale(1.02);
-}
-
-.etna-hero-content {
-    flex: 1;
-    min-width: 280px;
-}
-
-.etna-hero-content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #ffffff
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-}
-
-.etna-hero-content p {
-    color: #222E30;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
-
-/* 5. Sezioni con Titolo e Bordo Colorato */
-.etna-section {
-    margin-bottom: 4rem;
-}
-
-.etna-border-title {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.etna-border-decoration {
-    width: 5px;
-    height: 45px;
-    background: linear-gradient(135deg, #9bb8d4, #6c8db0);
-    border-radius: 4px;
-}
-
-.etna-border-title h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #04222c;
-    margin: 0;
-}
-
-/* 6. Layout testo e immagine */
-.etna-layout-row {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-}
-
-.etna-layout-row.reverse {
-    flex-direction: row-reverse;
-}
-
-.etna-text {
-    flex: 1;
-    min-width: 280px;
-}
-
-.etna-text p {
-    color: #222E30;
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 1.2rem;
-}
-
-.etna-image {
-    flex: 1;
-    min-width: 280px;
-}
-
-.etna-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 24px;
-    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease;
-}
-
-.etna-image img:hover {
-    transform: scale(1.02);
-}
-
-/* 7. Griglia Info Block (Stile VETRO) */
-.etna-info-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin: 3rem 0 2rem 0;
-}
-
-.etna-info-block {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 24px;
-    padding: 1.8rem;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.etna-info-block:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-5px);
-}
-
-.etna-info-block .etna-border-decoration {
-    width: 4px;
-    height: 35px;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, #9bb8d4, #6c8db0);
-}
-
-.etna-info-block h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #222E30;
-    margin-bottom: 1rem;
-}
-
-.etna-info-block p {
-    color: #222E30;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 0.8rem;
-}
-
-.etna-info-block p:last-child {
-    margin-bottom: 0;
-}
-
-/* Responsive per mobile */
-@media (max-width: 768px) {
-    .etna-info-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ========== PAGINA GRAN PARADISO - STILI SPECIFICI ========== */
-.granparadiso-page {
-    background-color: #222E30;
-}
-
-.granparadiso-quote {
-    background-color: #1a2a2c;
-    padding: 2rem 2rem;
-    text-align: center;
-    border-bottom: 1px solid rgba(247, 253, 255, 0.1);
-}
-
-.granparadiso-quote blockquote {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: #F7FDFF;
-    max-width: 900px;
-    margin: 0 auto;
-    line-height: 1.5;
-}
-
-.granparadiso-quote blockquote::before {
-    content: "«";
-    font-size: 2rem;
-    margin-right: 0.3rem;
-    color: #7cb5a0;
-}
-
-.granparadiso-quote blockquote::after {
-    content: "»";
-    font-size: 2rem;
-    margin-left: 0.3rem;
-    color: #7cb5a0;
-}
-
-.granparadiso-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 2rem 3rem 2rem;
-}
-
-.granparadiso-hero {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    margin-bottom: 4rem;
-    flex-wrap: wrap;
-}
-
-.granparadiso-hero-image {
-    flex: 1;
-    min-width: 280px;
-}
-
-.granparadiso-hero-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 24px;
-    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease;
-}
-
-.granparadiso-hero-image img:hover {
-    transform: scale(1.02);
-}
-
-.granparadiso-hero-content {
-    flex: 1;
-    min-width: 280px;
-}
-
-.granparadiso-hero-content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #F7FDFF;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-}
-
-.granparadiso-hero-content p {
-    color: #e0edf0;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
-
-.granparadiso-section {
-    margin-bottom: 4rem;
-}
-
-.granparadiso-border-title {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.granparadiso-border-decoration {
-    width: 5px;
-    height: 45px;
-    background: linear-gradient(135deg, #7cb5a0, #4a7c68);
-    border-radius: 4px;
-}
-
-.granparadiso-border-title h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #F7FDFF;
-    margin: 0;
-}
-
-.granparadiso-layout-row {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-}
-
-.granparadiso-layout-row.reverse {
-    flex-direction: row-reverse;
-}
-
-.granparadiso-text {
-    flex: 1;
-    min-width: 280px;
-}
-
-.granparadiso-text p {
-    color: #e0edf0;
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 1.2rem;
-}
-
-.granparadiso-image {
-    flex: 1;
-    min-width: 280px;
-}
-
-.granparadiso-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 24px;
-    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease;
-}
-
-.granparadiso-image img:hover {
-    transform: scale(1.02);
-}
-
-.granparadiso-subsection {
-    margin-top: 2rem;
-}
-
-.granparadiso-subsection h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #F7FDFF;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-}
-
-.granparadiso-info-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin: 3rem 0 2rem 0;
-}
-
-.granparadiso-info-block {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 24px;
-    padding: 1.8rem;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.granparadiso-info-block:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-5px);
-}
-
-.granparadiso-info-block .granparadiso-border-decoration {
-    width: 4px;
-    height: 35px;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, #7cb5a0, #4a7c68);
-}
-
-.granparadiso-info-block h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #F7FDFF;
-    margin-bottom: 1rem;
-}
-
-.granparadiso-info-block p {
-    color: #e0edf0;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 0.8rem;
-}
-
-.granparadiso-info-block p:last-child {
-    margin-bottom: 0;
-}
-
-/* ========== PAGINA DOLOMITI BELLUNESI - STILI SPECIFICI ========== */
-.dolomiti-page {
-    background-color: #222E30;
-}
-
-.dolomiti-quote {
-    background-color:#222E30 ;
-    padding: 2rem 2rem;
-    text-align: center;
-    border-bottom: 1px solid rgba(247, 253, 255, 0.1);
-}
-
-.dolomiti-quote blockquote {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: 
-    #ffffff;
-    max-width: 900px;
-    margin: 0 auto;
-    line-height: 1.5;
-}
-
-.dolomiti-quote blockquote::before {
-    content: "«";
-    font-size: 2rem;
-    margin-right: 0.3rem;
-    color: #9bb8d4;
-}
-
-.dolomiti-quote blockquote::after {
-    content: "»";
-    font-size: 2rem;
-    margin-left: 0.3rem;
-    color: #9bb8d4;
-}
-
-.dolomiti-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 2rem 3rem 2rem;
-}
-
-.dolomiti-hero {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    margin-bottom: 4rem;
-    flex-wrap: wrap;
-}
-
-.dolomiti-hero-image {
-    flex: 1;
-    min-width: 280px;
-}
-
-.dolomiti-hero-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 24px;
-    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease;
-}
-
-.dolomiti-hero-image img:hover {
-    transform: scale(1.02);
-}
-
-.dolomiti-hero-content {
-    flex: 1;
-    min-width: 280px;
-}
-
-.dolomiti-hero-content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #F7FDFF;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-}
-
-.dolomiti-hero-content p {
-    color: #e0edf0;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
-
-.dolomiti-section {
-    margin-bottom: 4rem;
-}
-
-.dolomiti-border-title {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.dolomiti-border-decoration {
-    width: 5px;
-    height: 45px;
-    background: linear-gradient(135deg, #9bb8d4, #6c8db0);
-    border-radius: 4px;
-}
-
-.dolomiti-border-title h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #F7FDFF;
-    margin: 0;
-}
-
-.dolomiti-layout-row {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-}
-
-.dolomiti-layout-row.reverse {
-    flex-direction: row-reverse;
-}
-
-.dolomiti-text {
-    flex: 1;
-    min-width: 280px;
-}
-
-.dolomiti-text p {
-    color: #e0edf0;
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 1.2rem;
-}
-
-.dolomiti-image {
-    flex: 1;
-    min-width: 280px;
-}
-
-.dolomiti-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 24px;
-    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease;
-}
-
-.dolomiti-image img:hover {
-    transform: scale(1.02);
-}
-
-.dolomiti-subsection {
-    margin-top: 2rem;
-}
-
-.dolomiti-subsection h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #F7FDFF;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-}
-
-.dolomiti-info-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin: 3rem 0 2rem 0;
-}
-
-.dolomiti-info-block {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 24px;
-    padding: 1.8rem;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.dolomiti-info-block:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-5px);
-}
-
-.dolomiti-info-block .dolomiti-border-decoration {
-    width: 4px;
-    height: 35px;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, #9bb8d4, #6c8db0);
-}
-
-.dolomiti-info-block h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #F7FDFF;
-    margin-bottom: 1rem;
-}
-
-.dolomiti-info-block p {
-    color: #e0edf0;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 0.8rem;
-}
-
-.dolomiti-info-block p:last-child {
-    margin-bottom: 0;
-}
-
-/* ========== PAGINA POLLINO - STILI SPECIFICI ========== */
+/* ========== PAGINE DETTAGLIO (ETNA, GRAN PARADISO, DOLOMITI, POLLINO) ========== */
+.etna-page,
+.granparadiso-page,
+.dolomiti-page,
 .pollino-page {
     background-color: #222E30;
 }
 
+.etna-quote,
+.granparadiso-quote,
+.dolomiti-quote,
 .pollino-quote {
-    background-color: #1a2a2c;
     padding: 2rem 2rem;
     text-align: center;
     border-bottom: 1px solid rgba(247, 253, 255, 0.1);
 }
 
+.etna-quote { background-color: #222E30; }
+.granparadiso-quote { background-color: #1a2a2c; }
+.dolomiti-quote { background-color: #222E30; }
+.pollino-quote { background-color: #1a2a2c; }
+
+.etna-quote blockquote,
+.granparadiso-quote blockquote,
+.dolomiti-quote blockquote,
 .pollino-quote blockquote {
     font-family: 'Playfair Display', serif;
     font-size: 1.4rem;
@@ -1381,13 +551,19 @@ body.etna-page {
     line-height: 1.5;
 }
 
+.etna-quote blockquote::before,
+.granparadiso-quote blockquote::before,
+.dolomiti-quote blockquote::before,
 .pollino-quote blockquote::before {
     content: "«";
     font-size: 2rem;
     margin-right: 0.3rem;
-    color:#9bb8d4 ;
+    color: #9bb8d4;
 }
 
+.etna-quote blockquote::after,
+.granparadiso-quote blockquote::after,
+.dolomiti-quote blockquote::after,
 .pollino-quote blockquote::after {
     content: "»";
     font-size: 2rem;
@@ -1395,12 +571,19 @@ body.etna-page {
     color: #9bb8d4;
 }
 
+/* Container e hero */
+.etna-container,
+.granparadiso-container,
+.dolomiti-container,
 .pollino-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 2rem 3rem 2rem;
 }
 
+.etna-hero,
+.granparadiso-hero,
+.dolomiti-hero,
 .pollino-hero {
     display: flex;
     align-items: center;
@@ -1409,11 +592,17 @@ body.etna-page {
     flex-wrap: wrap;
 }
 
+.etna-hero-image,
+.granparadiso-hero-image,
+.dolomiti-hero-image,
 .pollino-hero-image {
     flex: 1;
     min-width: 280px;
 }
 
+.etna-hero-image img,
+.granparadiso-hero-image img,
+.dolomiti-hero-image img,
 .pollino-hero-image img {
     width: 100%;
     height: auto;
@@ -1422,15 +611,24 @@ body.etna-page {
     transition: transform 0.3s ease;
 }
 
+.etna-hero-image img:hover,
+.granparadiso-hero-image img:hover,
+.dolomiti-hero-image img:hover,
 .pollino-hero-image img:hover {
     transform: scale(1.02);
 }
 
+.etna-hero-content,
+.granparadiso-hero-content,
+.dolomiti-hero-content,
 .pollino-hero-content {
     flex: 1;
     min-width: 280px;
 }
 
+.etna-hero-content h1,
+.granparadiso-hero-content h1,
+.dolomiti-hero-content h1,
 .pollino-hero-content h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
@@ -1440,6 +638,9 @@ body.etna-page {
     line-height: 1.2;
 }
 
+.etna-hero-content p,
+.granparadiso-hero-content p,
+.dolomiti-hero-content p,
 .pollino-hero-content p {
     color: #e0edf0;
     font-size: 1.05rem;
@@ -1447,10 +648,17 @@ body.etna-page {
     margin-bottom: 1rem;
 }
 
+/* Sezioni */
+.etna-section,
+.granparadiso-section,
+.dolomiti-section,
 .pollino-section {
     margin-bottom: 4rem;
 }
 
+.etna-border-title,
+.granparadiso-border-title,
+.dolomiti-border-title,
 .pollino-border-title {
     display: flex;
     align-items: center;
@@ -1458,13 +666,28 @@ body.etna-page {
     margin-bottom: 2rem;
 }
 
+.etna-border-decoration,
+.granparadiso-border-decoration,
+.dolomiti-border-decoration,
 .pollino-border-decoration {
     width: 5px;
     height: 45px;
-    background: linear-gradient(135deg, #9bb8d4, #9bb8d4);
     border-radius: 4px;
 }
 
+.etna-border-decoration,
+.dolomiti-border-decoration,
+.pollino-border-decoration {
+    background: linear-gradient(135deg, #9bb8d4, #6c8db0);
+}
+
+.granparadiso-border-decoration {
+    background: linear-gradient(135deg, #7cb5a0, #4a7c68);
+}
+
+.etna-border-title h2,
+.granparadiso-border-title h2,
+.dolomiti-border-title h2,
 .pollino-border-title h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
@@ -1473,6 +696,10 @@ body.etna-page {
     margin: 0;
 }
 
+/* Layout righe */
+.etna-layout-row,
+.granparadiso-layout-row,
+.dolomiti-layout-row,
 .pollino-layout-row {
     display: flex;
     align-items: center;
@@ -1480,15 +707,24 @@ body.etna-page {
     flex-wrap: wrap;
 }
 
+.etna-layout-row.reverse,
+.granparadiso-layout-row.reverse,
+.dolomiti-layout-row.reverse,
 .pollino-layout-row.reverse {
     flex-direction: row-reverse;
 }
 
+.etna-text,
+.granparadiso-text,
+.dolomiti-text,
 .pollino-text {
     flex: 1;
     min-width: 280px;
 }
 
+.etna-text p,
+.granparadiso-text p,
+.dolomiti-text p,
 .pollino-text p {
     color: #e0edf0;
     font-size: 1rem;
@@ -1496,11 +732,17 @@ body.etna-page {
     margin-bottom: 1.2rem;
 }
 
+.etna-image,
+.granparadiso-image,
+.dolomiti-image,
 .pollino-image {
     flex: 1;
     min-width: 280px;
 }
 
+.etna-image img,
+.granparadiso-image img,
+.dolomiti-image img,
 .pollino-image img {
     width: 100%;
     height: auto;
@@ -1509,14 +751,24 @@ body.etna-page {
     transition: transform 0.3s ease;
 }
 
+.etna-image img:hover,
+.granparadiso-image img:hover,
+.dolomiti-image img:hover,
 .pollino-image img:hover {
     transform: scale(1.02);
 }
 
+/* Sottosezioni */
+.etna-subsection,
+.granparadiso-subsection,
+.dolomiti-subsection,
 .pollino-subsection {
     margin-top: 2rem;
 }
 
+.etna-subsection h3,
+.granparadiso-subsection h3,
+.dolomiti-subsection h3,
 .pollino-subsection h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
@@ -1526,6 +778,10 @@ body.etna-page {
     margin-top: 1rem;
 }
 
+/* Griglie info */
+.etna-info-grid,
+.granparadiso-info-grid,
+.dolomiti-info-grid,
 .pollino-info-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1533,6 +789,9 @@ body.etna-page {
     margin: 3rem 0 2rem 0;
 }
 
+.etna-info-block,
+.granparadiso-info-block,
+.dolomiti-info-block,
 .pollino-info-block {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 24px;
@@ -1540,18 +799,26 @@ body.etna-page {
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
+.etna-info-block:hover,
+.granparadiso-info-block:hover,
+.dolomiti-info-block:hover,
 .pollino-info-block:hover {
     background: rgba(255, 255, 255, 0.08);
     transform: translateY(-5px);
 }
 
+.etna-info-block .etna-border-decoration,
+.granparadiso-info-block .granparadiso-border-decoration,
+.dolomiti-info-block .dolomiti-border-decoration,
 .pollino-info-block .pollino-border-decoration {
     width: 4px;
     height: 35px;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #9bb8d4, #9bb8d4);
 }
 
+.etna-info-block h3,
+.granparadiso-info-block h3,
+.dolomiti-info-block h3,
 .pollino-info-block h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
@@ -1560,6 +827,9 @@ body.etna-page {
     margin-bottom: 1rem;
 }
 
+.etna-info-block p,
+.granparadiso-info-block p,
+.dolomiti-info-block p,
 .pollino-info-block p {
     color: #e0edf0;
     font-size: 0.95rem;
@@ -1567,12 +837,72 @@ body.etna-page {
     margin-bottom: 0.8rem;
 }
 
+.etna-info-block p:last-child,
+.granparadiso-info-block p:last-child,
+.dolomiti-info-block p:last-child,
 .pollino-info-block p:last-child {
     margin-bottom: 0;
 }
 
-/* ========== RESPONSIVE DESIGN (TUTTE LE PAGINE) ========== */
-@media (max-width: 900px) {
+/* ============================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ============================================ */
+
+/* ===== TABLET (max 1024px) ===== */
+@media screen and (max-width: 1024px) {
+    /* Header */
+    .site-header-dark,
+    .site-header-light,
+    .site-header-flora,
+    .site-header-etna,
+    .site-header-granparadiso,
+    .site-header-dolomiti,
+    .site-header-pollino {
+        padding: 1rem 1.5rem;
+    }
+
+    /* Attività - da 2 a 1 colonna */
+    .grid-attivita {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 1.5rem auto;
+        padding: 0 1.5rem 2.5rem 1.5rem;
+    }
+
+    /* Flora - impilamento */
+    .flora-layout-row {
+        flex-direction: column !important;
+    }
+    .flora-layout-row.reverse {
+        flex-direction: column !important;
+    }
+
+    /* Pagine dettaglio - impilamento */
+    .etna-hero,
+    .granparadiso-hero,
+    .dolomiti-hero,
+    .pollino-hero {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .etna-layout-row,
+    .granparadiso-layout-row,
+    .dolomiti-layout-row,
+    .pollino-layout-row {
+        flex-direction: column !important;
+    }
+
+    .etna-info-grid,
+    .granparadiso-info-grid,
+    .dolomiti-info-grid,
+    .pollino-info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ===== MOBILE (max 768px) ===== */
+@media screen and (max-width: 768px) {
     /* Header */
     .site-header-dark,
     .site-header-light,
@@ -1583,322 +913,136 @@ body.etna-page {
     .site-header-pollino {
         flex-direction: column;
         text-align: center;
-        padding: 1.2rem;
+        padding: 1rem;
     }
-    
+
+    .logo h1 {
+        font-size: 1.5rem !important;
+    }
+    .logo p {
+        font-size: 0.7rem;
+    }
+
+    .header-icons {
+        gap: 1.2rem;
+    }
+    .header-icons i {
+        font-size: 1.1rem;
+    }
+
     /* Home */
+    .hero {
+        padding: 2rem 1rem 0.5rem 1rem;
+    }
     .hero h2 {
         font-size: 1.6rem;
     }
-    
+    .hero p {
+        font-size: 0.95rem;
+        padding: 0 0.5rem;
+    }
+
     .cards-container {
         flex-direction: column;
         align-items: center;
-        padding: 2rem 1rem;
+        padding: 2rem 1rem 3rem 1rem;
+        gap: 1.5rem;
     }
-    
     .card-icona {
         width: 100%;
-        max-width: 320px;
+        max-width: 350px;
+        min-width: unset;
+        padding: 1.8rem 1.2rem;
     }
-    
+    .card-icona i {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 2.5rem;
+    }
+
     /* Attività */
-    .grid-attivita {
-        grid-template-columns: 1fr;
-        max-width: 550px;
-        gap: 1.8rem;
+    .page-title {
+        padding: 1.5rem 1.2rem 0.5rem 1.2rem;
     }
-    
     .page-title h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        padding-left: 0.8rem;
+        border-left-width: 4px;
     }
-    
+
+    .grid-attivita {
+        padding: 0 1.2rem 2rem 1.2rem;
+        gap: 1.5rem;
+    }
+    .card {
+        padding: 1.5rem;
+    }
     .card h3 {
         font-size: 1.4rem;
     }
-    
+    .card p {
+        font-size: 0.9rem;
+    }
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2.2rem;
+        border-radius: 30px;
+    }
+
     /* Parchi */
-    .parchi-card {
-        min-height: 220px;
-    }
-    
-    .parchi-card h2 {
-        font-size: 1.5rem;
-    }
-    
     .parchi-subtitle {
-        font-size: 1rem;
-        padding: 0 1.5rem 1.5rem 1.5rem;
+        font-size: 0.95rem;
+        padding: 0 1rem 1.5rem 1rem;
     }
-    
-    /* Flora e Fauna */
+    .parchi-cards-container {
+        padding: 0 1rem 3rem 1rem;
+        gap: 1.5rem;
+    }
+    .parchi-card {
+        min-height: 200px;
+    }
+    .card-link h2 {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    /* Flora */
+    .flora-hero {
+        padding: 2rem 1rem 1rem 1rem;
+    }
     .flora-hero h1 {
         font-size: 2.5rem;
     }
-    
     .flora-hero p {
         font-size: 1rem;
     }
-    
-    .flora-layout-row {
-        flex-direction: column !important;
+    .flora-container {
+        padding: 1rem 1.2rem 2.5rem 1.2rem;
     }
-    
+    .flora-section {
+        margin-bottom: 2.5rem;
+    }
+    .flora-image {
+        min-width: 100%;
+    }
     .flora-text h2 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        border-left-width: 3px;
+        padding-left: 0.8rem;
     }
-    
+    .flora-text p {
+        font-size: 0.95rem;
+    }
+
     /* Pagine dettaglio */
-    .etna-hero,
-    .granparadiso-hero,
-    .dolomiti-hero,
-    .pollino-hero {
-        flex-direction: column;
-    }
-    
-    .etna-hero-content h1,
-    .granparadiso-hero-content h1,
-    .dolomiti-hero-content h1,
-    .pollino-hero-content h1 {
-        font-size: 2.2rem;
-    }
-    
-    .etna-layout-row,
-    .granparadiso-layout-row,
-    .dolomiti-layout-row,
-    .pollino-layout-row {
-        flex-direction: column !important;
-    }
-    
-    .etna-info-grid,
-    .granparadiso-info-grid,
-    .dolomiti-info-grid,
-    .pollino-info-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .etna-border-title h2,
-    .granparadiso-border-title h2,
-    .dolomiti-border-title h2,
-    .pollino-border-title h2 {
-        font-size: 1.6rem;
-    }
-    
     .etna-quote blockquote,
     .granparadiso-quote blockquote,
     .dolomiti-quote blockquote,
     .pollino-quote blockquote {
         font-size: 1.1rem;
     }
-    
-    .granparadiso-subsection h3,
-    .dolomiti-subsection h3,
-    .pollino-subsection h3 {
-        font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 600px) {
-    /* Home */
-    .hero {
-        padding: 2rem 1rem 1rem 1rem;
-    }
-    
-    .hero h2 {
-        font-size: 1.4rem;
-    }
-    
-    /* Attività */
-    .grid-attivita {
-        padding: 0 1.2rem 2rem 1.2rem;
-    }
-    
-    .card {
-        padding: 1.5rem;
-    }
-    
-    .page-title {
-        padding: 1.5rem 1.5rem 0.5rem 1.5rem;
-    }
-    
-    .page-title h1 {
-        font-size: 1.8rem;
-    }
-    
-    /* Parchi */
-    .parchi-cards-container {
-        padding: 0 1.2rem 3rem 1.2rem;
-        gap: 1.5rem;
-    }
-    
-    .parchi-card {
-        min-height: 180px;
-    }
-    
-    .parchi-card h2 {
-        font-size: 1.3rem;
-    }
-    
-    /* Flora e Fauna */
-    .flora-hero {
-        padding: 2rem 1rem 1rem 1rem;
-    }
-    
-    .flora-hero h1 {
-        font-size: 2rem;
-    }
-    
-    .flora-container {
-        padding: 0 1.2rem 3rem 1.2rem;
-    }
-    
-    .flora-section {
-        margin-bottom: 2.5rem;
-    }
-    
-    .flora-text h2 {
-        font-size: 1.4rem;
-    }
-    
-    .flora-text p {
-        font-size: 0.95rem;
-
-    }
-
-
-    .flora-container {
-        padding: 0 1.2rem 3rem 1.2rem;
-        gap: 1.5rem;
-    }
-    
-    .flora-card {
-        min-height: 180px;
-    }
-    
-    .flora-card h2 {
-        font-size: 1.3rem;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ====================== LINK ALLE CARD PARCHI ====================== */
-.parchi-card {
-    position: relative;           /* Importante per il posizionamento del link */
-    overflow: hidden;
-}
-
-.card-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: inherit;               /* Mantiene lo stesso colore del testo */
-    z-index: 2;
-}
-
-.card-link h2 {
-    position: relative;
-    z-index: 3;
-    transition: all 0.3s ease;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Effetto hover elegante */
-.card-link:hover h2 {
-    transform: scale(1.08);
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    color: #fff;                  /* Opzionale: rende il testo bianco sull'hover */
-}
-
-/* Assicura che il click funzioni su tutta la card */
-.parchi-card:hover {
-    transform: scale(1.03);
-    transition: transform 0.4s ease;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    /* Pagine dettaglio */
-    .etna-container,
-    .granparadiso-container,
-    .dolomiti-container,
-    .pollino-container {
-        padding: 1.5rem 1.2rem 2rem 1.2rem;
-    }
-    
-    .etna-hero-content h1,
-    .granparadiso-hero-content h1,
-    .dolomiti-hero-content h1,
-    .pollino-hero-content h1 {
-        font-size: 1.8rem;
-    }
-    
-    .etna-border-title h2,
-    .granparadiso-border-title h2,
-    .dolomiti-border-title h2,
-    .pollino-border-title h2 {
-        font-size: 1.4rem;
-    }
-    
-    .etna-info-block h3,
-    .granparadiso-info-block h3,
-    .dolomiti-info-block h3,
-    .pollino-info-block h3 {
-        font-size: 1.3rem;
-    }
-    
-    .granparadiso-subsection h3,
-    .dolomiti-subsection h3,
-    .pollino-subsection h3 {
-        font-size: 1.2rem;
-    }
-    
-    .etna-quote blockquote,
-    .granparadiso-quote blockquote,
-    .dolomiti-quote blockquote,
-    .pollino-quote blockquote {
-        font-size: 1rem;
-    }
-    
     .etna-quote blockquote::before,
     .etna-quote blockquote::after,
     .granparadiso-quote blockquote::before,
@@ -1908,12 +1052,78 @@ body.etna-page {
     .pollino-quote blockquote::before,
     .pollino-quote blockquote::after {
         font-size: 1.5rem;
+    }
 
+    .etna-container,
+    .granparadiso-container,
+    .dolomiti-container,
+    .pollino-container {
+        padding: 1.5rem 1.2rem 2.5rem 1.2rem;
+    }
 
+    .etna-hero-content h1,
+    .granparadiso-hero-content h1,
+    .dolomiti-hero-content h1,
+    .pollino-hero-content h1 {
+        font-size: 2rem;
+    }
+    .etna-hero-content p,
+    .granparadiso-hero-content p,
+    .dolomiti-hero-content p,
+    .pollino-hero-content p {
+        font-size: 0.95rem;
+    }
 
+    .etna-border-title h2,
+    .granparadiso-border-title h2,
+    .dolomiti-border-title h2,
+    .pollino-border-title h2 {
+        font-size: 1.6rem;
+    }
 
+    .etna-info-grid,
+    .granparadiso-info-grid,
+    .dolomiti-info-grid,
+    .pollino-info-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        margin: 2rem 0 1rem 0;
+    }
 
+    .etna-info-block,
+    .granparadiso-info-block,
+    .dolomiti-info-block,
+    .pollino-info-block {
+        padding: 1.5rem;
+    }
+    .etna-info-block h3,
+    .granparadiso-info-block h3,
+    .dolomiti-info-block h3,
+    .pollino-info-block h3 {
+        font-size: 1.3rem;
+    }
+    .etna-info-block p,
+    .granparadiso-info-block p,
+    .dolomiti-info-block p,
+    .pollino-info-block p {
+        font-size: 0.9rem;
+    }
 
+    .etna-subsection h3,
+    .granparadiso-subsection h3,
+    .dolomiti-subsection h3,
+    .pollino-subsection h3 {
+        font-size: 1.2rem;
+    }
 
+    /* Footer */
+    .footer-nav {
+        gap: 1.2rem;
+    }
+    .footer-nav a {
+        font-size: 0.8rem;
+    }
+    .copyright {
+        font-size: 0.7rem;
     }
 }
